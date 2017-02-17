@@ -19,6 +19,8 @@ class AccountController extends Controller
         // Create in tb_user too and accounts
         $account = new Account;
         // TODO
+        // ffaccount/accounts : id, username, password, realname
+        // ffmember/tb_user : mid (accounts.username), password, pwd (md5(password)), idnum (accounts.id), regdate (now()), memberid (accounts.id)
         $account->save();
     }
 
