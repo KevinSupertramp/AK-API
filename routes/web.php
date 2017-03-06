@@ -10,7 +10,7 @@ $app->group(['prefix' => 'api', 'middleware' => 'App\Http\Middleware\FormatJsonR
 
 	$app->group(['prefix' => 'v1'], function() use ($app) {
 
-		$app->get('/', function () { return 'AK-API V1'; });
+		$app->get('/', function () { return response()->json('AK-API V1'); });
 
 		// Require routes
 		require(__DIR__ . '/account.api.php');

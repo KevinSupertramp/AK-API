@@ -9,6 +9,11 @@ class AccountController extends Controller
 {
     public function __construct() {}
 
+    public function index()
+    {
+        return Account::all();
+    }
+
     public function show($id)
     {
         return Account::findOrFail($id);
