@@ -17,7 +17,7 @@ class FormatJsonResponse
             $content = [
                 'status' => 'success',
                 'message' => null,
-                'resource' => $response->getContent()
+                'resource' => (!$resource) ? $response->getContent() : $resource
             ];
         }
         else
